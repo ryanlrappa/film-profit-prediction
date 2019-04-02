@@ -21,9 +21,17 @@ Some additional goals are:
 ### **Outline of workflow:**  
 
 1. Collect data from The Movie Database's API  
-        1.1. ...  
+        1.1. Spin up a separate AWS EC2 instance for each table I'd like to collect (film info, credits, releases)  
+        1.2. Install necessary packages on each EC2 instance (Anaconda, pip, the API wrapper, aws-cli, tmux)  
+        1.3. Create a python script that saves data from the API to a new csv on each EC2  
+        1.4. Open a tmux session on each EC2 and run the respective python scripts  
+        1.5. Come back to the tmux sessions a day or two later and save the csv files to AWS S3 storage for later use  
 
 2. Clean the data and engineer features (e.g. to measure importance of cast and crew, release date)  
         2.1. ...  
         
-3. ...  
+3. Visualization and analysis  
+        3.1. ...  
+
+4. Saving and deploying the model  
+        4.1 ...
