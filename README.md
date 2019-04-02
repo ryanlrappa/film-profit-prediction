@@ -8,9 +8,9 @@ This portfolio project is a work in progress. Using a variety of publicly availa
 
 Some additional goals are:  
 
-**(3)** for the algorithm's inputs to be simple and few enough so that it could be used to predict the profitability of a film that has not been made yet, and  
+**(3)** for the model's inputs to be simple and few enough so that it could be used to predict the profitability of a film that has not been made yet, and  
 
-**(4)** for the algorithm to be interpretable, so users can get a sense of what factors make a film profitable vs. unprofitable.  
+**(4)** for the model to be interpretable, so users can get a sense of what factors make a film profitable vs. unprofitable.  
 
 ---------------  
 Outline of workflow:  
