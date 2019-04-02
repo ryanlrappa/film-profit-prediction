@@ -13,17 +13,18 @@ Some additional goals are:
 **(4)** for the model to be interpretable, so users can get a sense of what factors make a film profitable vs. unprofitable.  
 
 ---------------  
-Outline of workflow:  
+### **Files:**  
+
+- ...  
+
+---------------  
+### **Outline of workflow:**  
 
 1. Collect data from The Movie Database's API  
         1.1. ...  
 
 2. Clean the data and engineer features (e.g. to measure importance of cast and crew, release date)  
-        2.1 ...  
+        2.1. ...  
         
 3. ...  
 
----------------  
-Files:  
-
-- ...
