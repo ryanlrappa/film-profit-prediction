@@ -35,3 +35,19 @@ Some additional goals are:
 
 4. Save and deploy the model(s)  
         4.1 ...
+
+
+---------------  
+### **Possible extensions of the project:**  
+
+Time allowing, I might try to improve results by incorprating/modeling more features, such as:  
+
+- Film posters (perhaps there are certain kinds of posters that are more appealing than others)  
+- Film scripts, descriptions, and/or keywords (common sense would suggest that premise, plot, character arcs, etc matter)  
+- Data on marketing strategy such as budget, channels, number+locations of theaters film was released in  
+- Additional revenue: video, streaming, merchandise, etc (within the first year or two after release)  
+- Data on contemporaneous piracy  
+
+I'd also experiment more with deep learning approaches, e.g. neural nets.  
+
+**Another thing to note:** if the film industry shifts away from theatrial releases in a major way, toward substantially more straight-to-streaming releases, subsequent iterations of this project must rely on more comprehensive revenue data – not just global box office – in order to approximate film profitability (if such data is available).
