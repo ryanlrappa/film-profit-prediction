@@ -23,7 +23,7 @@ Some additional goals are:
 1. Collect data from The Movie Database's API  
         1.1. Spin up a separate AWS EC2 instance for each table I'd like to collect (film info, credits, releases)  
         1.2. Install necessary packages on each EC2 instance (Anaconda, pip, the API wrapper, aws-cli, tmux)  
-        1.3. Create a python script that saves relevant data from the API to a csv on each EC2  
+        1.3. Write a python script that saves relevant data from the API to a csv on each EC2  
         1.4. Open a tmux session on each EC2 and run the respective python scripts  
         1.5. Come back to the tmux sessions a day or two later and save the csv files to AWS S3 storage for later use  
 
@@ -43,7 +43,7 @@ Some additional goals are:
 Time allowing, I might try to improve results by incorprating/modeling more features, such as:  
 
 - Film posters (perhaps there are certain kinds of posters that are more appealing than others)  
-- Film scripts, descriptions, and/or keywords (common sense would suggest that premise, plot, character arcs, etc matter)  
+- Film scripts, descriptions, and/or keywords (experience suggests that premise, plot, character arcs, etc matter)  
 - Data on marketing strategy such as budget, channels, number+locations of theaters film was released in  
 - Additional revenue: video, streaming, merchandise, etc (within the first year or two after release)  
 - Data on contemporaneous piracy  
