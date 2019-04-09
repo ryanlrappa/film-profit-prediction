@@ -1,6 +1,6 @@
 # **Predicting Film Profitability**
 
-This portfolio project is a work in progress. Using a variety of publicly available data about tens of thousands of feature films, the goal is to design a machine learning algorithm (model) that can predict, as accurately as possible:  
+This portfolio project is a work in progress. Using a variety of publicly available data about thousands of feature films, the goal is to design a machine learning algorithm (model) that can predict, as accurately as possible:  
 
 **(1)** whether a film's global box office revenue exceeded (or will exceed) its budget, and  
 
@@ -25,7 +25,7 @@ Some additional goals are:
         1.2. Install necessary packages on each EC2 instance (Anaconda, pip, the API wrapper, aws-cli, tmux)  
         1.3. Write a python script that saves relevant data from the API to a csv on each EC2  
         1.4. Open a tmux session on each EC2 and run the respective python scripts  
-        1.5. Come back to the tmux sessions a day or two later and save the csv files to AWS S3 storage for later use  
+        1.5. Come back to the tmux sessions a day or two later and save the csv files to AWS S3 storage for further use  
 
 2. Clean the data and engineer features (e.g. to measure importance of cast and crew, release date)  
         2.1. ...  
