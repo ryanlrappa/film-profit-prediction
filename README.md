@@ -1,4 +1,4 @@
-# **Predicting Film Profitability**
+# **Predicting Film Profitability (v1)**
 
 This portfolio project is a work in progress. Using a variety of publicly available data about thousands of feature films, the goal is to design a machine learning algorithm (model) that can predict, as accurately as possible:  
 
@@ -17,8 +17,14 @@ Some additional goals are:
 
 - csv_files: CSVs with data used in the various jupyter notebooks (except for the full raw data, which was too large to upload here)
 - jupyter_notebooks:  
-        - ...
-        
+        - 1_API_exploration.ipynb -- Just exploring how TheMovieDB API works with the tmdbsimple API wrapper  
+        - 2_data_collection.ipynb -- Drafts of funtions later run in python scripts on an EC2 w/ tmux to collect the full raw data from the API  
+        - 3_draft_data_cleaning.ipynb -- Drafts of functions/workflow to clean the data and engineer new features  
+        - 4_full_data_cleaning.ipynb -- Final functions/workflow used to clean and feature engineer the full data  
+        - 5_EDA.ipynb -- Visualizations and other exploration of patterns/relationships in the data  
+        - 6_modeling.ipynb -- Trying various models to see which can predict most effectively, including visualizations of confusion matrices and ROC curves, and parameter tuning for gradient boosting model (also has notes on my approach from a business perspective)  
+- pickle_files: jupyter notebook (draft) and python file (final) scripts used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model  
+- presentation slides pdf: my initial slide deck presenting/summarizing the project -- please check this out!  
 
 ---------------  
 ### **Outline of workflow:**  
