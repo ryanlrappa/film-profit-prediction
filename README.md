@@ -25,6 +25,8 @@ Some additional goals are:
         - 6_modeling.ipynb -- Trying various models to see which can predict most effectively, including visualizations of confusion matrices and ROC curves, and parameter tuning for gradient boosting model (also has notes on my approach from a business perspective)  
 - **pickle_files:** jupyter notebook (draft) and python file (final) scripts used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model  
 - **presentation slides pdf:** my initial slide deck presenting/summarizing the project -- check it out!  
+  
+**Note:** This initial version of the project is just modeling/classifying whether a film is profitable or not (i.e. whether global box office exceeded production budget), not taking the additional step of trying to predict the amount of profit. Future iterations of this project should consider domestic vs. foreign box office and amount of profit.
 
 ---------------  
 ### **Outline of workflow:**  
