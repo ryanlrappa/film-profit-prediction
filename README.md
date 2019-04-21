@@ -15,7 +15,10 @@ Some additional goals are:
 ---------------  
 ### **Files:**  
 
-- ...  
+- csv_files: CSVs with data used in the various jupyter notebooks (except for the full raw data, which was too large to upload here)
+- jupyter_notebooks:
+        - ...
+        
 
 ---------------  
 ### **Outline of workflow:**  
