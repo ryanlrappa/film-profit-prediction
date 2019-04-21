@@ -26,7 +26,7 @@ Some additional goals are:
 - **pickle_files:** jupyter notebook (draft) and python file (final) scripts used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model  
 - **presentation slides pdf:** my initial slide deck presenting/summarizing the project -- check it out!  
   
-**Note:** This initial version of the project is just modeling/classifying whether a film is profitable or not (i.e. whether global box office exceeded production budget), not taking the additional step of trying to predict the amount of profit. Future iterations of this project should consider domestic vs. foreign box office and amount of profit.
+**Note:** This version of the project is just modeling/classifying whether a film is profitable or not (i.e. whether global box office exceeded production budget), not taking the additional step of trying to predict the amount of profit. Future iterations of this project should consider domestic vs. foreign box office and amount of profit.
 
 ---------------  
 ### **Outline of workflow:**  
