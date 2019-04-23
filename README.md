@@ -18,7 +18,7 @@ Some additional goals are:
 - **csv_files:** CSVs with data used in the various jupyter notebooks (except for the full raw data, which was too large to upload here)
 - **jupyter_notebooks:**  
                 - **1_API_exploration.ipynb:** exploring how TheMovieDB API works with the tmdbsimple API wrapper  
-                - **2_data_collection.ipynb:** drafts of funtions later run in python scripts on an EC2 w/ tmux to collect full raw data
+                - **2_data_collection.ipynb:** drafts of funtions later run in python scripts on an EC2 w/ tmux to collect full raw data  
                 - **3_draft_data_cleaning.ipynb:** drafts of functions/workflow to clean the data and engineer new features  
                 - **4_full_data_cleaning.ipynb:** final functions/workflow used to clean and feature engineer the full data  
                 - **5_EDA.ipynb:** visualizations and other notes on patterns/relationships in the data  
