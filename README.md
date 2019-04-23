@@ -17,12 +17,12 @@ Some additional goals are:
 
 - **csv_files:** CSVs with data used in the various jupyter notebooks (except for the full raw data, which was too large to upload here)
 - **jupyter_notebooks:**  
-        **1_API_exploration.ipynb:** exploring how TheMovieDB API works with the tmdbsimple API wrapper  
-        **2_data_collection.ipynb:** drafts of funtions later run in python scripts on an EC2 w/ tmux to collect full raw data
-        **3_draft_data_cleaning.ipynb:** drafts of functions/workflow to clean the data and engineer new features  
-        **4_full_data_cleaning.ipynb:** final functions/workflow used to clean and feature engineer the full data  
-        **5_EDA.ipynb:** visualizations and other notes on patterns/relationships in the data  
-        **6_modeling.ipynb:** trying different models to see which predicts best, including visualizations of confusion matrices and ROC curves, and parameter tuning for gradient boosting model (also has notes on my approach from a business perspective)  
+                **1_API_exploration.ipynb:** exploring how TheMovieDB API works with the tmdbsimple API wrapper  
+                **2_data_collection.ipynb:** drafts of funtions later run in python scripts on an EC2 w/ tmux to collect full raw data
+                **3_draft_data_cleaning.ipynb:** drafts of functions/workflow to clean the data and engineer new features  
+                **4_full_data_cleaning.ipynb:** final functions/workflow used to clean and feature engineer the full data  
+                **5_EDA.ipynb:** visualizations and other notes on patterns/relationships in the data  
+                **6_modeling.ipynb:** trying different models to see which predicts best, including visualizations of confusion matrices and ROC curves, and parameter tuning for gradient boosting model (also has notes on my approach from a business perspective)  
 - **pickle_files:** jupyter notebook (draft) and python file (final) scripts used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model  
 - **presentation slides pdf:** my initial slide deck presenting/summarizing the project -- check it out!  
   
