@@ -23,7 +23,7 @@ Some additional goals are:
                 - `4_full_data_cleaning.ipynb`: final functions/workflow used to clean and feature engineer the full data  
                 - `5_EDA.ipynb`: visualizations and other notes on patterns/relationships in the data  
                 - `6_modeling.ipynb`: trying different models to see which predicts best, including visualizations of confusion matrices and ROC curves, and parameter tuning for gradient boosting model (also has notes on my approach from a business perspective)  
-- **modelss:** jupyter notebook (draft) and python file (final) scripts used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model (.pkl file)  
+- **models:** jupyter notebook (draft) and python file (final) scripts used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model (.pkl file)  
 - **presentation_slides_vX.pdf:** slide deck presenting/summarizing the project -- check it out!  
   
 **Note:** This version of the project is just modeling/classifying whether a film is profitable or not (i.e. whether global box office exceeded production budget), not taking the additional step of trying to predict the amount of profit. Future iterations of this project should consider domestic vs. foreign box office and amount of profit.
