@@ -15,7 +15,7 @@ Some additional goals are:
 ---------------  
 ### **Files:**  
 
-- **data:** CSVs with data used in the various jupyter notebooks (except for the raw data, which was too large to upload here)
+- **data:** CSVs used in the jupyter notebooks (except for the raw data, which was too large to upload)
 - **notebooks:**  
                 - `1_API_exploration.ipynb`: exploring how TheMovieDB API works with the tmdbsimple API wrapper  
                 - `2_data_collection.ipynb`: drafts of funtions later run in python scripts on an EC2 w/ tmux to collect full raw data  
@@ -25,6 +25,24 @@ Some additional goals are:
                 - `6_modeling.ipynb`: trying different models to see which predicts best, including visualizations of confusion matrices and ROC curves, and parameter tuning for gradient boosting model (also has notes on my approach from a business perspective)  
 - **models:** jupyter notebook (draft) and python file (final) scripts used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model (.pkl file)  
 - **presentation_vX.pdf:** slide deck presenting/summarizing the project -- check it out!  
+- **src** (transition from notebooks to polished scripts in progress):
+        ``` 
+        ├── src                <- Source code for use in this project.
+        │   │
+        │   ├── data           <- Scripts to download or generate data
+        │   │   └── collect_raw_data.py
+        │   │
+        │   ├── features       <- Scripts to turn raw data into features for modeling
+        │   │   └── build_features.py
+        │   │
+        │   ├── models         <- Scripts to train, tune and use models to make predictions           
+        │   │   ├── train_model.py
+        │   │   └── predict_model.py
+        │   │
+        │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+        │       ├── confusion_matrix.py
+        │       └── visualize.py
+        ```
   
 **Note:** This version of the project is just modeling/classifying whether a film is profitable or not (i.e. whether global box office exceeded production budget), not taking the additional step of trying to predict the amount of profit. Future iterations of this project should consider domestic vs. foreign box office and amount of profit.
 
