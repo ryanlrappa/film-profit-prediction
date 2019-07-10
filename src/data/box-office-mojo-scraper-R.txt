@@ -1,0 +1,54 @@
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.70 (7684) x86_64-apple-darwin15.6.0]
+
+[History restored from /Users/ryanrappa/.Rapp.history]
+
+> install.packages("boxoffice")
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'https://cran.cnr.berkeley.edu/bin/macosx/el-capitan/contrib/3.6/boxoffice_1.2.2.tgz'
+Content type 'application/x-gzip' length 30899 bytes (30 KB)
+==================================================
+downloaded 30 KB
+
+
+The downloaded binary packages are in
+	/var/folders/tj/csqv83jj1z13c52r24t5g23h0000gn/T//Rtmpl1CFGC/downloaded_packages
+> movies <- boxoffice::top_grossing(type = 'american', ranks = 1:15000)
+Please note that these numbers are not adjusted for inflation.
+> head(movies)
+  rank                                movie year_released american_box_office international_box_office total_box_office
+2    1 Star Wars Ep. VII: The Force Awakens          2015           936662225               1116648995       2053311220
+3    2                    Avengers: Endgame          2019           848768907               1923980847       2772749754
+4    3                               Avatar          2009           760507625               2015837654       2776345279
+5    4                        Black Panther          2018           700059566                648198658       1348258224
+6    5               Avengers: Infinity War          2018           678815482               1369318718       2048134200
+7    6                              Titanic          1997           659363944               1548844451       2208208395
+> tail(movies)
+        rank                  movie year_released american_box_office international_box_office total_box_office
+96149  14995                     No          1999                8380                       NA             8380
+97149  14996             Downloaded          2013                8377                       NA             8377
+98149  14997               Counting          2015                8374                       NA             8374
+99149  14998 Christmas at Maxwell's          2006                8370                       NA             8370
+100149 14999    Eternity: The Movie          2014                8350                       NA             8350
+101149 15000              A Teacher          2013                8348                       NA             8348
+objc[18961]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff8bcdf3d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x1106c3f50). One of the two will be used. Which one is undefined.
+> write.csv(movies, '../../data/raw/the-numbers.csv')
+> 
