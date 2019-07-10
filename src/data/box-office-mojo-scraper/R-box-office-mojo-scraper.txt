@@ -1,0 +1,44 @@
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.70 (7684) x86_64-apple-darwin15.6.0]
+
+[History restored from /Users/ryanrappa/.Rapp.history]
+
+> install.packages("boxoffice")
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'https://cran.cnr.berkeley.edu/bin/macosx/el-capitan/contrib/3.6/boxoffice_1.2.2.tgz'
+Content type 'application/x-gzip' length 30899 bytes (30 KB)
+==================================================
+downloaded 30 KB
+
+
+The downloaded binary packages are in
+	/var/folders/tj/csqv83jj1z13c52r24t5g23h0000gn/T//Rtmp5mbOoR/downloaded_packages
+> movies <- boxoffice::top_grossing(type = 'american', ranks = 1:15000)
+Please note that these numbers are not adjusted for inflation.
+> write.csv(movies, '../../../data/raw/box-office-mojo.csv')
+Error in file(file, ifelse(append, "a", "w")) : 
+  cannot open the connection
+In addition: Warning message:
+In file(file, ifelse(append, "a", "w")) :
+  cannot open file '../../../data/raw/box-office-mojo.csv': No such file or directory
+objc[20961]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff8bcdf3d8) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x1196e0f50). One of the two will be used. Which one is undefined.
+> write.csv(movies, '../../../data/raw/box-office-mojo.csv')
+> 
