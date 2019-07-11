@@ -60,7 +60,7 @@ with open("../../data/raw/box-office-mojo-full.csv", "w") as f:
 			url='http://www.boxofficemojo.com/movies/?id=elizabeth%A0.htm'
 		if "simpleplan" in url:
 			url='http://www.boxofficemojo.com/movies/?id=simpleplan%A0.htm'
-		print(url)
+		#print(url)
 		#time.sleep(0.1)
 		#current_url = (url + "&adjust_yr=2015&p=.htm")  #converts gross to 2015 dollars (not doing this b/c it doesn't adjust budget)
 	
@@ -129,7 +129,7 @@ with open("../../data/raw/box-office-mojo-full.csv", "w") as f:
 		all_bs=soup.findAll('b')
 		b_list=[] #lots of the information we want is in bold, and appears in the same order on each page
 		for t in all_bs:
-			if 'Domestic Lifetime' not in t.encode_contents():#want to ignore the lifetime box office
+			if 'Domestic Lifetime' not in t.encode_contents(): #want to ignore the lifetime box office
 				b_list.append(t.encode_contents())
 		if len(b_list)>=10:#avoids bad entries with no box office data
 			if '$'in b_list[2] or 'n/a' in b_list[9]:#avoid movies w/o box office data, or unadjustable box office data, if not caught above
