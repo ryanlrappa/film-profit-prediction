@@ -56,7 +56,7 @@ with open("../../data/raw/box-office-mojo-full.csv", "w") as f:
 	output.writerow(fieldnames)
 
 	for url in movie_links:
-		if "elizabeth" in url and "elizabethtown" not in url: #fixes an annoying encoding error in an inelagent way
+		if "elizabeth" in url and "elizabethtown" not in url: #fixes an annoying encoding error in an inelegent way
 			url='http://www.boxofficemojo.com/movies/?id=elizabeth%A0.htm'
 		if "simpleplan" in url:
 			url='http://www.boxofficemojo.com/movies/?id=simpleplan%A0.htm'
@@ -64,7 +64,8 @@ with open("../../data/raw/box-office-mojo-full.csv", "w") as f:
 		#time.sleep(0.1)
 		#current_url = (url + "&adjust_yr=2015&p=.htm")  #converts gross to 2015 dollars (not doing this b/c it doesn't adjust budget)
 	
-		soup = BeautifulSoup(urlopen(current_url).read())
+		r = http.request('GET', url) #### <-was previously 'current_url', why?
+		soup = BeautifulSoup(r.data) ####
 
 		directors=soup.findAll('a', href= re.compile('Director&id'))
 		director_list=[]
@@ -167,7 +168,7 @@ with open("../../data/raw/box-office-mojo-full.csv", "w") as f:
 						worldwide='N/A'
 					else:
 						worldwide=b_list[13]
-				#print release
+				#print(release)
 				output.writerow([title,director1,director2,domestic,distributor,release,genre,runtime,rating,budget,worldwide,actor1,actor2,actor3,actor4,actor5,actor6,producer1,producer2,producer3,producer4,producer5,producer6,writer1,writer2,composer1,composer2])#since this is in the big "if" it wont write to file if it is formated incorrectly
 		
 		#else:
@@ -175,4 +176,4 @@ with open("../../data/raw/box-office-mojo-full.csv", "w") as f:
 			#print url	#i want to see which ones i threw away, to check if my criteria is good
 			#print 'bad format'
 
-print("Done writing file")
+print("Done writing file.")
