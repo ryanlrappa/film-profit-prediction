@@ -7,18 +7,17 @@ import itertools
 class ConfusionMatrix:
     '''
     Class for plotting confusion matrix
-    as well as accuracy, precision, recall, fallout
-    given the following:
-    y_pred (predicted values),
-    y_test (actual values),
-    model (classifier)
+    as well as accuracy, precision, recall, and fallout.
 
-    Usage
-    --------
-    1. instantiate class object, passing in
-    y_pred, y_test, and model
-    2. use the plot_confusion_matrix and show_data 
-    methods on the class object
+    Args:
+        y_pred (list or np array): Predicted target values.
+        y_test (list or np array): Actual target values.
+        model (sklearn model obj): Classifier.
+
+    Example:
+        cm = ConfusionMatrix(y_pred, y_test, model)
+        cm.confusion_matrix()
+
     '''
     
     def __init__(self, y_pred, y_test, model):
@@ -29,20 +28,15 @@ class ConfusionMatrix:
         if model.classes_[0] == 1:  #in case the labels are flipped from the usual indices
             self.cm = np.array([[self.cm[1,1], self.cm[1,0]], [self.cm[0,1], self.cm[0,0]]])
 
-    def plot_confusion_matrix(self, classes=['0', '1'],
-                          normalize=False,
-                          title_on=False,
-                          title='Confusion matrix',
-                          cmap=plt.cm.Blues):
-        '''
-        This function prints and plots the confusion matrix.
+
+    def confusion_matrix(self, classes=['0', '1'], title_on=False, title='Confusion Matrix', cmap=plt.cm.Blues):
+        '''Plots confusion matrix w/ accuracy, precision, recall, fallout.
         
-        Args
-        --------
-        classes: ['0', '1'] by default, can be changed as desired (use list of 2 strings)
-        title_on: set this to True to print title arg as title
-        title: string to be used as plot title, if previous arg set to True
-        cmap: plot color palette
+        Args:
+            classes (list of two str): ['0', '1'] by default, change labels as desired.
+            title_on (bool, optional): Default False, set to True to print title.
+            title (str): Show title, if title_on arg set to True.
+            cmap: Plot color palette.
 
         '''
 
@@ -69,26 +63,31 @@ class ConfusionMatrix:
         ax.xaxis.set_label_position('top')
         plt.show()
 
-    def show_data(self, print_res=1):
-        '''
-        Usage
-        --------
-        acc, pr, tpr, fpr = ConfusionMatrix.show_data()
+        tp = self.cm[1,1]
+        fn = self.cm[1,0]
+        fp = self.cm[0,1]
+        tn = self.cm[0,0]
+        print('Accuracy =     {:.3f}'.format((tp+tn)/(tp+fp+tn+fn)))
+        print('Precision =     {:.3f}'.format(tp/(tp+fp)))
+        print('Recall (TPR) =  {:.3f}'.format(tp/(tp+fn)))
+        print('Fallout (FPR) = {:.3f}'.format(fp/(fp+tn)))
 
-        Args
-        --------
-        print_res: default 1, set to 0 for no printing
+
+    def evaluation_metrics(self, print_res=1):
+        '''
+        Args:
+            print_res (bool, optional): default 1, set to 0 for no printing
+
+        Example:
+            acc, pr, tpr, fpr = ConfusionMatrix.show_data()
         '''
         tp = self.cm[1,1]
         fn = self.cm[1,0]
         fp = self.cm[0,1]
         tn = self.cm[0,0]
         if print_res == 1:
-            print('Accuracy =     {:.3f}'.format((tp+tn)/(tp+fp+tn+fn)))  #my addition
+            print('Accuracy =     {:.3f}'.format((tp+tn)/(tp+fp+tn+fn)))
             print('Precision =     {:.3f}'.format(tp/(tp+fp)))
             print('Recall (TPR) =  {:.3f}'.format(tp/(tp+fn)))
             print('Fallout (FPR) = {:.3f}'.format(fp/(fp+tn)))
         return (tp+tn)/(tp+fp+tn+fn), tp/(tp+fp), tp/(tp+fn), fp/(fp+tn)
-
-
-# if __name__ == "__main__":
