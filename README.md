@@ -34,7 +34,7 @@ Some additional goals are:
   
 - **models:** Draft scripts to be used on EC2 to GridSearchCV gradient boost model. Pickled final model (.pkl file) to be included.  
   
-- **presentation_vX.pdf:** Slides summarizing main findings and results -- **check this out!**  
+- **presentation.pdf:** Slides summarizing main findings and results -- **check this out!**  
   
 - **src** (transition from notebooks to polished scripts in progress):  
 
