@@ -1,10 +1,8 @@
 # **Predicting Film Profitability with ML**
  
-```
 *“Nobody knows anything... Not one person in the entire motion picture field knows for a certainty what's going to work. Every time out it's a guess and, if you're lucky, an educated one.”*
 
-    ― William Goldman, screenwriter of Butch Cassidy and the Sundance Kid*
-```
+*― William Goldman, screenwriter of Butch Cassidy and the Sundance Kid*
 
 Making successful movies may never be an exact science, but with publicly available film data and machine learning techniques, we can now start to make better educated guesses about what works and what doesn't. This project specifically looks at data provided by TheMovieDatabase API and other sources – with variables including actors, director, writer, budget, genre, and release date, among others – to discover robust correlates of profitable films and predict profitability with high accuracy and precision.
 
