@@ -21,23 +21,28 @@ Some additional goals are:
 ---------------  
 ### **Files:**  
 
-- **data:** CSVs used in the jupyter notebooks (except for the raw data, which was too large to upload)
+- **data:** CSVs used in the jupyter notebooks (except for the raw data, which was too large to upload)  
+  
 - **notebooks:**  
-                - `1_API_exploration.ipynb`: exploring how TheMovieDB API works with the tmdbsimple API wrapper  
-                - `2_data_collection.ipynb`: drafts of funtions later run in python scripts on an EC2 w/ tmux to collect full raw data  
-                - `3_draft_data_cleaning.ipynb`: drafts of functions/workflow to clean the data and engineer new features  
-                - `4_full_data_cleaning.ipynb`: final functions/workflow used to clean and feature engineer the full data  
-                - `5_EDA.ipynb`: visualizations and other notes on patterns/relationships in the data  
-                - `6_modeling.ipynb`: trying different models to see which predicts best, including visualizations of confusion matrices and ROC curves, and parameter tuning for gradient boosting model (also has notes on my approach from a business perspective)  
-- **models:** jupyter notebook (draft) and python file (final) scripts that can be used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model (.pkl file)  
-- **presentation_vX.pdf:** slide deck presenting/summarizing the project -- check it out!  
+                - `1_API_exploration.ipynb`: Testing TheMovieDB API and tmdbsimple API wrapper.  
+                - `2_data_collection.ipynb`: Draft funtions later run as scripts on EC2 w/ tmux to collect raw data.  
+                - `3_draft_data_cleaning.ipynb`: Draft functions/workflow to clean the data and engineer new features.  
+                - `4_full_data_cleaning.ipynb`: Functions, etc used to clean full data and feature engineer.  
+                - `5_EDA.ipynb`: Visualizations of and notes on patterns in the data.  
+                - `6_modeling.ipynb`: Playing w/ different models and parameters.  
+                - `7_modeling2.ipynb`: Lasso plots, etc for robust coefficients + fine-tuning XGBoost.  
+  
+- **models:** Draft scripts to be used on EC2 to GridSearchCV gradient boost model. Pickled final model (.pkl file) to be included.  
+  
+- **presentation_vX.pdf:** Slides summarizing main findings and results -- **check this out!**  
+  
 - **src** (transition from notebooks to polished scripts in progress):  
 
 ```
 ├── src                <- Source code for use in this project.
 │   │
 │   ├── data           <- Scripts to download or generate data
-│   │   └── collect_raw_data.py
+│   │   └── collect_raw.py
 │   │
 │   ├── features       <- Scripts to turn raw data into features for modeling
 │   │   └── build_features.py
@@ -47,12 +52,12 @@ Some additional goals are:
 │   │   └── predict_model.py
 │   │
 │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│       ├── confusion_matrix.py
+│       ├── eda.py
 │       └── visualize.py
 ```
 
 ---------------  
-### **Outline of workflow (in progress):**  
+### **Outline of workflow (to be updated):**  
 
 1. Collect data from The Movie Database's API  
         1.1. Spin up a separate AWS EC2 instance for each table I'd like to collect (film info, credits, releases)  
