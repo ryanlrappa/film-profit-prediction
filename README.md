@@ -16,12 +16,12 @@ Some additional goals are:
 
 **(3)** for the model's inputs to be simple and few enough so that it could be used to predict the profitability of a film that has not been made yet (making some assumptions about the unmade film's cast, crew and release), and  
 
-**(4)** for the model to be interpretable, so users can get a sense of what factors make a film profitable vs. unprofitable.  
+**(4)** for the model to be interpretable, so users can better understand what factors make films profitable.  
 
 ---------------  
 ### **Files:**  
 
-- **data:** CSVs used in the jupyter notebooks (except for the raw data, which was too large to upload)  
+- **data:** CSVs used for analysis (except for the raw data, which is too large to upload here)  
   
 - **notebooks:**  
                 - `1_API_exploration.ipynb`: Testing TheMovieDB API and tmdbsimple API wrapper.  
@@ -78,10 +78,11 @@ Some additional goals are:
 ---------------  
 ### **Possible extensions of the project:**  
 
-Time allowing, I might try to improve results by collecting more data via web scraping or other sources, and considering more variables like:  
+Time allowing, I might try to improve results by collecting more data via web scraping or other sources, and by considering more variables like:  
 
 - Posters and trailers
 - Scripts, plot descriptions, and/or keywords
-- Marketing budget, channels, number and geography of theaters film was released in  
-- Ancillary revenues: video, streaming, merchandise, etc.
+- Marketing budget, marketing channels, distributors, locations and number of theaters film was released in  
+- Ancillary revenues: video, streaming, merchandise, etc  
+- Domestic vs. foreign box office  
 - Piracy  
