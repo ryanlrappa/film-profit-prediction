@@ -1,6 +1,12 @@
-# **Predicting Film Profitability (v1)**
+# **Predicting Film Profitability with ML**
+ 
+*“Nobody knows anything... Not one person in the entire motion picture field knows for a certainty what's going to work. Every time out it's a guess and, if you're lucky, an educated one.”
 
-This portfolio project is a work in progress. Using a variety of publicly available data about thousands of feature films, the goal is to design a machine learning algorithm (model) that can predict, as accurately as possible:  
+    ― William Goldman, screenwriter of Butch Cassidy and the Sundance Kid*
+
+Making successful movies may never be an exact science, but with publicly available film data and machine learning techniques, we can now start to make better educated guesses about what works and what doesn't. This project specifically looks at data provided by TheMovieDatabase API and other sources – with variables including actors, director, writer, budget, genre, and release date, among others – to discover robust correlates of profitable films and predict profitability with high accuracy and precision.
+
+This project is a work in progress. The goal is to iterate upon models in order predict, as accurately and precisely as possible:  
 
 **(1)** whether a film's global box office revenue exceeded (or will exceed) its budget, and  
 
@@ -23,7 +29,7 @@ Some additional goals are:
                 - `4_full_data_cleaning.ipynb`: final functions/workflow used to clean and feature engineer the full data  
                 - `5_EDA.ipynb`: visualizations and other notes on patterns/relationships in the data  
                 - `6_modeling.ipynb`: trying different models to see which predicts best, including visualizations of confusion matrices and ROC curves, and parameter tuning for gradient boosting model (also has notes on my approach from a business perspective)  
-- **models:** jupyter notebook (draft) and python file (final) scripts used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model (.pkl file)  
+- **models:** jupyter notebook (draft) and python file (final) scripts that can be used on EC2 to run GridSearchCV on gradient boosting model, and pickled final model (.pkl file)  
 - **presentation_vX.pdf:** slide deck presenting/summarizing the project -- check it out!  
 - **src** (transition from notebooks to polished scripts in progress):  
 
@@ -44,11 +50,9 @@ Some additional goals are:
 │       ├── confusion_matrix.py
 │       └── visualize.py
 ```
-  
-**Note:** This version of the project is just modeling/classifying whether a film is profitable or not (i.e. whether global box office exceeded production budget), not taking the additional step of trying to predict the amount of profit. Future iterations of this project should consider domestic vs. foreign box office and amount of profit.
 
 ---------------  
-### **Outline of workflow:**  
+### **Outline of workflow (in progress):**  
 
 1. Collect data from The Movie Database's API  
         1.1. Spin up a separate AWS EC2 instance for each table I'd like to collect (film info, credits, releases)  
@@ -66,18 +70,13 @@ Some additional goals are:
 4. Save and deploy the model(s)  
         4.1 ...
 
-
 ---------------  
 ### **Possible extensions of the project:**  
 
-Time allowing, I might try to improve results by incorprating/modeling more features, such as:  
+Time allowing, I might try to improve results by collecting more data via web scraping or other sources, and considering more variables like:  
 
-- Film posters (perhaps there are certain kinds of posters that are more appealing than others)  
-- Film scripts, descriptions, and/or keywords (experience suggests that premise, plot, character arcs, etc matter)  
-- Data on marketing strategy such as budget, channels, number+locations of theaters film was released in  
-- Additional revenue: video, streaming, merchandise, etc (within the first year or two after release)  
-- Data on contemporaneous piracy  
-
-I would also try to gather much more data, possibly via web scaping, because The Movie Database only has reliable budget and revenue data for a few thousand films. And I'd like to experiment more with deep learning approaches, e.g. neural nets.  
-
-**Another thing to note:** if the film industry shifts away from theatrial releases in a major way, toward substantially more straight-to-streaming releases, subsequent iterations of this project must rely on more comprehensive revenue data – not just global box office – in order to approximate film profitability (if such data is available).
+- Posters and trailers
+- Scripts, plot descriptions, and/or keywords
+- Marketing budget, channels, number and geography of theaters film was released in  
+- Ancillary revenues: video, streaming, merchandise, etc.
+- Piracy  
